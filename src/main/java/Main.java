@@ -13,6 +13,8 @@ public class Main {
     public static void main(String[] args) {
         // Crear tablas si no existen
         DatabaseSetup.createUserTable();
+        DatabaseSetup.createDockingStationsTable();
+        DatabaseSetup.createVehicleTable();
 
         // Crear el controlador de empleados
         EmployeeController employeeController = new EmployeeController();
