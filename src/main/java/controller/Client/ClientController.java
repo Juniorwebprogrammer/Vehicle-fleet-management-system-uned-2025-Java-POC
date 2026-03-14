@@ -14,13 +14,15 @@ public class ClientController {
             String name,
             String email,
             String password,
-            String type
+            String type,
+            double balance
     ) {
         ClientCreateDTO clientCreateDTO = new ClientCreateDTO(
                 name,
                 email,
                 password,
-                type
+                type,
+                balance
         );
 
         clientService.createClient(clientCreateDTO);
@@ -47,4 +49,6 @@ public class ClientController {
     public void updateTypeClient(String type, int id) {
         clientService.updateTypeClient(type, id);
     }
+
+    public void updateBalanceClient(double balance, int id) throws Exception { clientService.updateBalanceClient(balance, id); }
 }

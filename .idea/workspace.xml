@@ -5,38 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87945e44-6cd2-4668-b48f-5cc740369508" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Client/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Employee/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Client/ClientCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Client/ClientGetDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Client/ClientPutDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Employee/EmployeeCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Employee/EmployeeGetDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Employee/EmployeePutDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/User/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/User/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/User/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehicle/Bicicleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehicle/Moto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehicle/Patinete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehicle/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRespositoryHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Employee/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Employee/EmployeeRepositoryHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Client/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Employee/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Client/ClientCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Client/ClientCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Client/ClientGetDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Client/ClientGetDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRespositoryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRespositoryHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Client/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Juniorwebprogrammer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Juniorwebprogrammer/Vehicle-fleet-management-system-uned-2025-Java-POC.git&quot;,
+    &quot;accountId&quot;: &quot;a9887d7a-b18c-4573-9273-fa4929453143&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -72,7 +73,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -92,6 +94,13 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

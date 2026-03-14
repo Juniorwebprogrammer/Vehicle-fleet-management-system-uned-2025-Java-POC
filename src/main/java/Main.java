@@ -10,7 +10,7 @@ import model.User.Employee;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // Crear tablas si no existen
         DatabaseSetup.createUserTable();
         DatabaseSetup.createDockingStationsTable();
@@ -100,8 +100,8 @@ public class Main {
         // Crear el controlador de clientes
         ClientController clientController = new ClientController();
 
-        System.out.println("Registrando cliente...");
-        clientController.createClient("Junior García", "juniorgarcia@uned.es", "123456", "test");
+        /*System.out.println("Registrando cliente...");
+        clientController.createClient("Junior García", "juniorgarcia2@uned.es", "123456", "test", 16.50);
 
         // Obtener la lista de clients
         System.out.println("Llamando a get clientes...");
@@ -113,6 +113,7 @@ public class Main {
             System.out.println("Nombre: " + client.getName());
             System.out.println("Email: " + client.getEmail());
             System.out.println("Rol: " + client.getType());
+            System.out.println("Balance " + client.getBalance());
             System.out.println("-------------------------");
         }
 
@@ -123,6 +124,7 @@ public class Main {
             System.out.println("ID: " + clientById.getId());
             System.out.println("Nombre: " + clientById.getName());
             System.out.println("Rol: " + clientById.getType());
+            System.out.println("Balance " + clientById.getBalance());
             System.out.println("-------------------------");
         } else {
             System.out.println("Empleado no encontrado");
@@ -155,6 +157,7 @@ public class Main {
             System.out.println("Nombre: " + checkUpdateInformationClient.getName());
             System.out.println("Email: " + checkUpdateInformationClient.getEmail());
             System.out.println("Rol: " + checkUpdateInformationClient.getType());
+            System.out.println("Balance " + checkUpdateInformationClient.getBalance());
             System.out.println("-------------------------");
         } else {
             System.out.println("Cliente no encontrado");
@@ -170,9 +173,13 @@ public class Main {
             System.out.println("Nombre: " + checkUpdateTypeClient.getName());
             System.out.println("Email: " + checkUpdateTypeClient.getEmail());
             System.out.println("Rol: " + checkUpdateTypeClient.getType());
+            System.out.println("Balance " + checkUpdateTypeClient.getBalance());
             System.out.println("-------------------------");
         } else {
             System.out.println("Cliente no encontrado");
-        }
+        }*/
+
+        // Actualizar balance de un cliente
+        clientController.updateBalanceClient(2.0, 4);
     }
 }

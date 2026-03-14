@@ -18,8 +18,8 @@ public class ClientRepository {
         try (Connection connection = DatabaseConnection.getConnection()) {
             connection.setAutoCommit(false);
 
-            int userId = clientRespositoryHelper.insertClient(connection, client);
-            clientRespositoryHelper.insertClientType(connection, userId, client.getType());
+            int userId = clientRespositoryHelper.insertUser(connection, client);
+            clientRespositoryHelper.insertClient(connection, userId, client.getType(), client.getBalance());
 
             connection.commit();
         } catch (SQLException exception) {
@@ -29,7 +29,7 @@ public class ClientRepository {
 
     public List<Client> getclientList() {
         String sqlQuery = """
-            SELECT user.id, user.name, user.email, client.type
+            SELECT user.id, user.name, user.email, client.type, client.balance
             FROM clients client
             JOIN users user ON client.user_id = user.id
         """;
@@ -47,6 +47,7 @@ public class ClientRepository {
                      client.setName(resultSet.getString("name"));
                      client.setEmail(resultSet.getString("email"));
                      client.setType(resultSet.getString("type"));
+                     client.setBalance(resultSet.getDouble("balance"));
 
                      clientList.add(client);
                  }
@@ -59,7 +60,7 @@ public class ClientRepository {
 
     public Client getClientById(int id) {
         String sqlQuery = """
-            SELECT user.id, user.name, client.type
+            SELECT user.id, user.name, client.type, client.balance
             FROM clients client
             JOIN users user ON client.user_id = user.id
             WHERE user.id = ?    
@@ -76,6 +77,7 @@ public class ClientRepository {
                     client.setId(resultSet.getInt("id"));
                     client.setName(resultSet.getString("name"));
                     client.setType(resultSet.getString("type"));
+                    client.setBalance(resultSet.getDouble("balance"));
 
                     return  client;
                 }
@@ -109,6 +111,19 @@ public class ClientRepository {
         try (Connection connection = DatabaseConnection.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql)){
             preparedStatement.setString(1, type);
+            preparedStatement.setInt(2, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public void updateBalanceClient(double balance, int id) {
+        String sql = "UPDATE clients SET balance = ? WHERE user_id = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setDouble(1, balance);
             preparedStatement.setInt(2, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {

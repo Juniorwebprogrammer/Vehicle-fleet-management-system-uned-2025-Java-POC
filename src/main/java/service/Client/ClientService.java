@@ -16,7 +16,8 @@ public class ClientService {
                 client.getId(),
                 client.getName(),
                 client.getEmail(),
-                client.getType()
+                client.getType(),
+                client.getBalance()
         );
     }
 
@@ -25,7 +26,8 @@ public class ClientService {
                 newClientData.getName(),
                 newClientData.getEmail(),
                 newClientData.getPassword(),
-                newClientData.getType()
+                newClientData.getType(),
+                newClientData.getBalance()
         );
 
         clientRepository.createClient(newClient);
@@ -61,5 +63,13 @@ public class ClientService {
 
     public void updateTypeClient(String type, int id) {
         clientRepository.updateTypeClient(type, id);
+    }
+
+    public void updateBalanceClient(double balance, int id) throws Exception {
+        if (balance < 0) {
+            throw new Exception("El balance no puede ser inferior a cero");
+        }
+
+        clientRepository.updateBalanceClient(balance, id);
     }
 }

@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class ClientRespositoryHelper {
 
-    int insertClient(Connection connection, Client client) throws SQLException {
+    int insertUser(Connection connection, Client client) throws SQLException {
         String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -28,12 +28,13 @@ public class ClientRespositoryHelper {
         }
     }
 
-    void insertClientType(Connection connection, int userId, String type) throws SQLException {
-        String sql = "INSERT INTO clients (user_id, type) VALUES (?, ?)";
+    void insertClient(Connection connection, int userId, String type, double balance) throws SQLException {
+        String sql = "INSERT INTO clients (user_id, type, balance) VALUES (?, ?, ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setInt(1, userId);
             preparedStatement.setString(2, type);
+            preparedStatement.setDouble(3, balance);
             preparedStatement.executeUpdate();
         }
     }

@@ -19,6 +19,7 @@ public class DatabaseSetup {
         String sqlClient = "CREATE TABLE IF NOT EXISTS clients (" +
                 "user_id INT PRIMARY KEY," +
                 "type VARCHAR(100)," +
+                "balance FLOAT(18,2) NOT NULL DEFAULT 0.0," +
                 "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE" +
                 ");";
         try (Connection connection = DatabaseConnection.getConnection(); Statement statement = connection.createStatement()) {
