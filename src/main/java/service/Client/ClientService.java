@@ -17,7 +17,9 @@ public class ClientService {
                 client.getName(),
                 client.getEmail(),
                 client.getType(),
-                client.getBalance()
+                client.getBalance(),
+                client.getRentCount(),
+                client.getVip()
         );
     }
 
@@ -27,7 +29,9 @@ public class ClientService {
                 newClientData.getEmail(),
                 newClientData.getPassword(),
                 newClientData.getType(),
-                newClientData.getBalance()
+                newClientData.getBalance(),
+                newClientData.getRentCount(),
+                newClientData.getVip()
         );
 
         clientRepository.createClient(newClient);
@@ -72,4 +76,8 @@ public class ClientService {
 
         clientRepository.updateBalanceClient(balance, id);
     }
+
+    public void updateRentCountClient(int rentCount, int id) { clientRepository.updateRentCount(rentCount, id); }
+
+    public void updateVipClient(boolean vip, int id) { clientRepository.updateVip(vip, id); }
 }

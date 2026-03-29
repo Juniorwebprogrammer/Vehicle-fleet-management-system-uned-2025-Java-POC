@@ -60,7 +60,7 @@ public class ClientRepository {
 
     public Client getClientById(int id) {
         String sqlQuery = """
-            SELECT user.id, user.name, client.type, client.balance
+            SELECT user.id, user.name, client.type, client.balance, client.rentCount, client.vip
             FROM clients client
             JOIN users user ON client.user_id = user.id
             WHERE user.id = ?    
@@ -78,6 +78,8 @@ public class ClientRepository {
                     client.setName(resultSet.getString("name"));
                     client.setType(resultSet.getString("type"));
                     client.setBalance(resultSet.getDouble("balance"));
+                    client.setRentCount(resultSet.getInt("rentCount"));
+                    client.setVip(resultSet.getBoolean("vip"));
 
                     return  client;
                 }
@@ -126,6 +128,22 @@ public class ClientRepository {
             preparedStatement.setDouble(1, balance);
             preparedStatement.setInt(2, id);
             preparedStatement.executeUpdate();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public void updateRentCount(int rent, int id) {
+        try (Connection connection = DatabaseConnection.getConnection()){
+            clientRespositoryHelper.updateRentCount(connection, rent, id);
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public void updateVip(boolean vip, int id) {
+        try (Connection connection = DatabaseConnection.getConnection()){
+            clientRespositoryHelper.updateVipUser(connection, vip, id);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

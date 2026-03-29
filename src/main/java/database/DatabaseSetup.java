@@ -20,6 +20,8 @@ public class DatabaseSetup {
                 "user_id INT PRIMARY KEY," +
                 "type VARCHAR(100)," +
                 "balance FLOAT(18,2) NOT NULL DEFAULT 0.0," +
+                "rentCount int NOT NULL DEFAULT 0," +
+                "vip boolean NOT NULL DEFAULT false," +
                 "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE" +
                 ");";
         try (Connection connection = DatabaseConnection.getConnection(); Statement statement = connection.createStatement()) {

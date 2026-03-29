@@ -181,5 +181,20 @@ public class Main {
 
         // Actualizar balance de un cliente
         clientController.updateBalanceClient(2.0, 4);
+
+        // Actualizar contador de alquileres
+        clientController.updateRentCountClient(2, 4);
+
+        // Obtener el client para revisar si su rentCount es igual o superior a 10 actualizando su condición a vip o no
+        ClientGetDTO client = clientController.getClientById(4);
+
+        if (client != null && client.getRentCount() >= 10) {
+            clientController.updateVipClient(true, 4);
+            System.out.println("Cliente actualizado a vip");
+        } else {
+            assert client != null;
+            clientController.updateVipClient(false, client.getId());
+            System.out.println("Cliente sin condición vip");
+        }
     }
 }

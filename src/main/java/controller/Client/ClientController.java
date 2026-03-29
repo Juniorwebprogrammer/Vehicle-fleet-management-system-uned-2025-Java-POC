@@ -15,14 +15,18 @@ public class ClientController {
             String email,
             String password,
             String type,
-            double balance
+            double balance,
+            int rentCount,
+            boolean vip
     ) {
         ClientCreateDTO clientCreateDTO = new ClientCreateDTO(
                 name,
                 email,
                 password,
                 type,
-                balance
+                balance,
+                rentCount,
+                vip
         );
 
         clientService.createClient(clientCreateDTO);
@@ -51,4 +55,8 @@ public class ClientController {
     }
 
     public void updateBalanceClient(double balance, int id) throws Exception { clientService.updateBalanceClient(balance, id); }
+
+    public void updateRentCountClient(int rentCount, int id) { clientService.updateRentCountClient(rentCount, id); }
+
+    public void updateVipClient(boolean vip, int id) { clientService.updateVipClient(vip, id); }
 }

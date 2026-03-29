@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87945e44-6cd2-4668-b48f-5cc740369508" name="Changes" comment="">
+    <list default="true" id="87945e44-6cd2-4668-b48f-5cc740369508" name="Changes" comment="Add balance to client and set up the database for the feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Client/ClientController.java" afterDir="false" />
@@ -15,6 +15,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRespositoryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Client/ClientRespositoryHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/Client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Client/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Client/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DatabaseSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DatabaseSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Client/ClientCreateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Client/ClientCreateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Client/ClientGetDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Client/ClientGetDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/Client/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/Client/ClientRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/Client/ClientRespositoryHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/Client/ClientRespositoryHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/Client/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Client/ClientService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +88,11 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -110,6 +124,15 @@
       <option name="presentableId" value="Default" />
       <updated>1769703892478</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add balance to client and set up the database for the feature">
+      <option name="closed" value="true" />
+      <created>1773529993984</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773529993984</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,5 +145,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add balance to client and set up the database for the feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add balance to client and set up the database for the feature" />
   </component>
 </project>

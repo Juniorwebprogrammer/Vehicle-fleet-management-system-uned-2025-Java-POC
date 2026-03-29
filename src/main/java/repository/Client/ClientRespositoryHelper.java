@@ -66,4 +66,40 @@ public class ClientRespositoryHelper {
             }
         }
     }
+
+    void updateRentCount(Connection connection, int rentIncrementCount, int id) throws  SQLException {
+        String sql = "UPDATE clients SET rentCount = ? WHERE user_id = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setInt(2, id);
+
+            preparedStatement.setInt(1, rentIncrementCount);
+
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected == 0) {
+                System.out.println("Usuario no encontrado");
+            } else {
+                System.out.println("Contador de alquiler actualizado con éxito");
+            }
+        }
+    }
+
+    void updateVipUser(Connection connection, boolean isVip, int id) throws SQLException {
+        String sql = "UPDATE clients SET vip = ? WHERE user_id = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setInt(2, id);
+
+            preparedStatement.setBoolean(1, isVip);
+
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected == 0) {
+                System.out.println("Usuario no encontrado");
+            } else {
+                System.out.println("Condición vip del cliente actualizado con éxito");
+            }
+        }
+    }
 }
